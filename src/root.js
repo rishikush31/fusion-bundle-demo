@@ -17,10 +17,12 @@ const Contact = split({
   ErrorComponent: () => <div>Error loading Contact</div>,
 });
 
-export default () => (
+const root = (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/contact" component={Contact} />
   </Switch>
 );
+
+export default root;

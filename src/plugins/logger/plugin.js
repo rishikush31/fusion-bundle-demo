@@ -17,7 +17,8 @@ export default createPlugin({
 
   middleware() {
     return async (ctx, next) => {
-      console.log(`[SERVER-MW] Request for: ${ctx.path}`);
+      if(__NODE__)
+        console.log(`[SERVER-MW] Request for: ${ctx.path}`);
       await next();
     };
   },
